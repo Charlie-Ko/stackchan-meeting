@@ -1,0 +1,37 @@
+# ---- 密钥（绝不进仓库）----
+.env
+*.env
+!.env.example
+
+# 本机私有配置：make 用的地址/令牌（secrets.mk）与固件令牌头（config_secrets.h）
+secrets.mk
+config_secrets.h
+*_secrets.h
+!config_secrets.h.example
+
+# ---- PlatformIO ----
+.pio/
+.pioenvs/
+.piolibdeps/
+# 固件本地依赖快照（16MB），由 platformio.ini 的 lib_deps 自动重下
+firmware/*/lib/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ---- 运行时数据 ----
+var/
+*.log
+
+# ---- 构建产物 ----
+build/
+dist/
+*.bin
+*.elf
+*.map
+
+# ---- macOS ----
+.DS_Store
